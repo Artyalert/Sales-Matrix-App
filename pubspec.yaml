@@ -1,0 +1,54 @@
+name: sales_matrix_app
+description: >
+  A cross-platform Flutter application that visualizes sales metrics,
+  supports offline caching, and compares purchase-order and invoice PDFs
+  with discrepancy reporting.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Icons
+  cupertino_icons: ^1.0.6
+
+  # State Management (Clean Architecture)
+  flutter_bloc: ^9.1.1
+
+  # Charts for dashboard analytics
+  fl_chart: ^0.66.2
+
+  # Local offline storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # File selection (PDFs)
+  file_picker: ^8.0.5
+
+  # PDF parsing (Purchase Order & Invoice comparison)
+  syncfusion_flutter_pdf: ^25.2.7
+
+  # File system access (CSV export, app directories)
+  path_provider: ^2.1.4
+
+  # Runtime permissions (Android storage access)
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Lint rules for clean & maintainable code
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/sales.json
